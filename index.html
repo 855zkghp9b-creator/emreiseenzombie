@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Arena 3D</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <div><p class="eyebrow">NEON ARENA // 3D</p><h1>Survive the swarm</h1></div>
+      </header>
+      <section class="game-card">
+        <div id="scene" aria-label="3D speelveld van de shooter"></div>
+        <div class="game-hud hud" aria-live="polite">
+          <div class="hud-stat level-stat"><span>Level</span><strong id="level">1</strong><span id="levelProgress" class="level-progress">0 / 5</span></div>
+          <div class="hud-stat"><span>Score</span><strong id="score">0</strong></div>
+          <div class="hud-stat health-stat"><span>Health</span><div id="healthDisplay" class="health-display" role="img" aria-label="Health: 100 van 100"><div id="healthHearts" class="health-hearts" aria-hidden="true"><span class="heart is-full">♥</span><span class="heart is-full">♥</span><span class="heart is-full">♥</span><span class="heart is-full">♥</span><span class="heart is-full">♥</span></div><span id="health" class="sr-only">100 van 100</span></div></div>
+          <div class="hud-stat ammo-stat"><span>Ammo</span><strong id="ammo">30 / 30</strong><span id="reloadStatus" class="reload-status" aria-live="polite"></span></div>
+        </div>
+        <div id="levelAnnouncement" class="level-announcement" aria-live="assertive">
+          <strong id="levelAnnouncementTitle"></strong>
+          <span id="levelAnnouncementText"></span>
+        </div>
+        <div class="crosshair" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div id="overlay" class="overlay"><p class="eyebrow" id="overlayEyebrow">READY?</p><h2 id="overlayTitle">Emre is een zombie en verovert de wereld, Hou hem tegen!!</h2><p id="overlayText">Klik om te starten. Beweeg met WASD, kijk rond met je muis en schiet met een muisklik.</p><button id="startButton" type="button">Start game</button></div>
+      </section>
+      <p class="controls">Bewegen: <kbd>WASD</kbd> · Kijken: muis · Schieten: muisklik of <kbd>spatie</kbd> · Herladen: <kbd>R</kbd> · Pauze: <kbd>P</kbd></p>
+    </main>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
